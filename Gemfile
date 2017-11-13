@@ -18,7 +18,6 @@ gem 'dotenv-rails'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'capybara-webkit'
 end
 
 group :development do
