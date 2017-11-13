@@ -1,4 +1,4 @@
-class TemperatureReadingsController < ApplicationController
+class TemperatureReadingsController < ActionController::API
   def index
     render json: TemperatureReading.limit(10)
   end
