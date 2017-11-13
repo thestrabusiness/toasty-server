@@ -4,6 +4,14 @@ default: &default
   pool: 5
   timeout: 5000
   host: localhost
+  username: postgres
+  password: password
+
+production:
+  <<: *default
+  database: <%= ENV.fetch('TOASTY_PROD_DB') %>
+  username: <%= ENV.fetch('TOASTY_PROD_USER') %>
+  password: <%= ENV.fetch('TOASTY_PROD_PASSWORD') %>
 
 development:
   <<: *default
