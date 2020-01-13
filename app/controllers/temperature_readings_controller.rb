@@ -1,10 +1,10 @@
 class TemperatureReadingsController < ActionController::API
   def index
-    render json: TemperatureReading.limit(10)
+    render json: TemperatureReading.order(created_at: :desc).limit(10)
   end
 
   def latest_reading
-    render json: TemperatureReading.last
+    render json: TemperatureReading.order(created_at: :asc).last
   end
 
   def create
